@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { MenuSup, Link }from './style/styles'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <MenuSup>
+      <Link as="a" href="#"> Seja um Revendedor</Link>
+      <Link as="a" href="#"> Seja um Franqueado</Link>
+      <Link as="a" href="#"> Área para Empresas</Link>
+      <Link as="a" href="#"> Vale Presente</Link>
+      <Link as="a" href="#"> Trabalhe conosco</Link>
+      
+    </MenuSup>
+    
     </div>
   );
 }
