@@ -1,5 +1,6 @@
-import { MenuSup, Link, MenuPrinc, Pesquisa, Icon, Login, Local, Cart, LinkUser }from './style/styles'
+import { MenuSup, Link, MenuPrinc, Pesquisa, Icon, Login, Cart, LinkUser }from './style/styles'
 import { Search, ShoppingCart, User } from 'react-feather';
+import NavBar from './components/NavBar'
 
 function App() {
 
@@ -27,14 +28,15 @@ function App() {
           <Login>
           <LinkUser as="a" href="#"><User/>Entrar</LinkUser>
           </Login>
-          <Local></Local>
           <Cart as="a" href="#">
             <ShoppingCart/>
           </Cart>
           
           </Pesquisa>
         </MenuPrinc>
-      
+
+        <NavBar />
+    
 
     </div>
     

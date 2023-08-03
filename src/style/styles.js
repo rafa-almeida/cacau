@@ -1,5 +1,6 @@
 import styled  from 'styled-components'
 
+
 export const MenuSup = styled.div `
 
     height: 5vh;
@@ -30,7 +31,7 @@ export const MenuPrinc = styled.div `
     width: 100vw;
     margin-left:-8px;
     background-image: url('https://dengo.vteximg.com.br/arquivos/ids/162281-360-360/dengo-chocolates-caixa-classico-ao-leite-3.jpg?v=638200127701700000');
-
+    
 `;
 
 export const Pesquisa = styled.div `
@@ -40,7 +41,8 @@ export const Pesquisa = styled.div `
     padding-left: 500px;
     padding-top:50px;
     width: 80em;
-
+    margin-bottom: 0;
+    padding-bottom:0;
 
     input{
         
@@ -81,14 +83,93 @@ export const LinkUser = styled.a `
    }
 `;
 
-export const Local = styled.div `
-
-`;
-
 export const Cart = styled.div `
     
     svg{
         padding-right: 25px;
         color: #32CD32;
+    }
+`;
+
+
+////NAVBAR/////
+
+export const NavBar = styled.div `
+   max-width: 90vw;
+    height: 8vh;
+    display: flex;
+    padding: 0 20px 0 0;
+    
+
+`;
+export const NavLink = styled.h4`
+    cursor: pointer;
+    color: #B8860B;
+    font-family: 'Dai Banna SIL', serif;
+    margin-top: -40px;
+    
+    h4:hover  {
+       
+        background-color:#FFD700;
+        color: white;
+        
+    }
+`;
+
+export const Menu = styled.ul`
+    display: flex;
+    list-style: none;
+    font-family: 'Dai Banna SIL', serif;
+    cursor: pointer;
+
+    li{
+        position: relative;
+        border-radius: 10px;
+    }
+
+    li:hover ul{
+    display: block;
+    }
+
+    a{
+    
+    padding: 17px;
+    text-decoration: none;
+    font-size: 12px;
+    display: block;
+    }
+
+    
+`;
+
+export const SubMenu = styled.ul`
+    list-style: none;
+    display:none;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background: whitesmoke;
+    min-width: 130px;
+    
+   
+    li{
+        position: relative;
+        top: 0;
+        width: 90px;
+        
+    }
+
+    li:hover a{
+        background-color:#FFD700;
+        color: white;
+    }
+
+    
+
+    a{
+        font-family: Arial, Helvetica, sans-serif;
+        color: #B8860B;
+        width: 70px;
+        height: 8px;
     }
 `;
