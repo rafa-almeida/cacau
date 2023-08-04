@@ -1,10 +1,9 @@
 import { MenuSup, Link, MenuPrinc, Pesquisa, Icon, Login, Cart, LinkUser }from './style/styles'
 import { Search, ShoppingCart, User } from 'react-feather';
 import NavBar from './components/NavBar'
+import Slider from './components/Slider'
 
 function App() {
-
-  
 
   return (
     <div>
@@ -18,25 +17,25 @@ function App() {
         </MenuSup>
       </div>
       
-        <MenuPrinc>
+      <MenuPrinc>
           
-          <Pesquisa >
-          <input type="text" placeholder="Buscar Produto" />
-          <Icon>
-            <Search/>
-          </Icon>
-          <Login>
+        <Pesquisa >
+          <input type="text" placeholder="Buscar Produto"/>
+        <Icon as="a" href="#">
+          <Search />
+        </Icon>
+        <Login>
           <LinkUser as="a" href="#"><User/>Entrar</LinkUser>
-          </Login>
-          <Cart as="a" href="#">
-            <ShoppingCart/>
-          </Cart>
+        </Login>
+        <Cart as="a" href="#">
+          <ShoppingCart/>
+        </Cart>
           
-          </Pesquisa>
-        </MenuPrinc>
+        </Pesquisa>
+      </MenuPrinc>
 
-        <NavBar />
-    
+      <NavBar />
+      <Slider />
 
     </div>
     

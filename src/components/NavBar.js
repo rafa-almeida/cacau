@@ -67,6 +67,34 @@ function Navbar() {
                             </SubMenu>
 
                         </li>
+
+                        <li>
+                            <NavLink as="a" href="/"> <h4>PRESENTES</h4></NavLink>
+                            <SubMenu>
+                                <li>
+                                    <Link to="/" >Latas Presenteáveis</Link>
+                                </li>
+                                <li>
+                                    <Link to="/" >Nossos Clássicos</Link>
+                                </li>
+                                <li>
+                                    <Link to="/" >Pralinas</Link>
+                                </li>
+                            </SubMenu>
+
+                        </li>
+
+                        <li>
+                            <NavLink  as="a" href="/" > <h4>PROMOÇÕES</h4></NavLink>
+                        </li>
+
+                        <li>
+                            <NavLink  as="a" href="/" > <h4>OUTLET</h4></NavLink>
+                        </li>
+
+                        <li>
+                            <NavLink  as="a" href="/" > <h4>CONHEÇA O APP</h4></NavLink>
+                        </li>
                     
                     
 

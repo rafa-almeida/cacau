@@ -34,7 +34,7 @@ export const MenuPrinc = styled.div `
     
 `;
 
-export const Pesquisa = styled.div `
+export const Pesquisa = styled.a `
 
     display: flex;
     justify-content:center;
@@ -80,6 +80,7 @@ export const LinkUser = styled.a `
    svg{
     margin-left:280px;
     color: #32CD32;
+    
    }
 `;
 
@@ -95,10 +96,14 @@ export const Cart = styled.div `
 ////NAVBAR/////
 
 export const NavBar = styled.div `
-   max-width: 90vw;
-    height: 8vh;
+   width: 98vw;
+    height: 6vh;
     display: flex;
-    padding: 0 20px 0 0;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+   padding-top: 20px;
+    background-color:#FFF5EE;
     
 
 `;
@@ -106,12 +111,14 @@ export const NavLink = styled.h4`
     cursor: pointer;
     color: #B8860B;
     font-family: 'Dai Banna SIL', serif;
+    letter-spacing: 1px;
     margin-top: -40px;
     
+    h4{
+        font-size: medium;
+    }
     h4:hover  {
-       
-        background-color:#FFD700;
-        color: white;
+        text-decoration: underline;
         
     }
 `;
@@ -121,7 +128,9 @@ export const Menu = styled.ul`
     list-style: none;
     font-family: 'Dai Banna SIL', serif;
     cursor: pointer;
-
+    justify-content: center;
+    align-items: start;
+    padding-left: 140px;
     li{
         position: relative;
         border-radius: 10px;
@@ -146,10 +155,12 @@ export const SubMenu = styled.ul`
     list-style: none;
     display:none;
     position: absolute;
-    top: 10px;
+    top: 14px;
     left: 0;
-    background: whitesmoke;
+    background: #FFFAFA;
     min-width: 130px;
+    letter-spacing:1px;
+   
     
    
     li{
@@ -160,16 +171,36 @@ export const SubMenu = styled.ul`
     }
 
     li:hover a{
-        background-color:#FFD700;
-        color: white;
+        text-decoration: underline;
+        
     }
 
     
 
     a{
+        
         font-family: Arial, Helvetica, sans-serif;
         color: #B8860B;
-        width: 70px;
+        width: 90px;
         height: 8px;
     }
+`;
+
+
+////CAROUSEL/////
+
+export const Conteudo = styled.div `
+    
+    
+    position: relative;
+    z-index: -1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const Slide = styled.div `
+    width: 500px;
+   height: 300px;
 `;
