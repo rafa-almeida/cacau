@@ -1,17 +1,67 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
-import { Conteudo, Slide  }from '../style/styles'
+
+
+import { motion } from 'framer-motion'
+import { Conteudo, Carrossel, Inner, Item  }from '../style/styles'
+
 
 import choco2 from '../img/choco2.png'
 import choco1 from '../img/choco1.jpg'
 import concurso from '../img/concurso.png'
 import trufa from '../img/trufa.png'
+import { useEffect, useRef, useState } from "react";
 
-   function Slider() {
+const images = [choco1,choco2,concurso,trufa]
+
+function Slider() {
+        const carrossel = useRef();
+        const [width, setWidth] = useState(0)
+
+        useEffect(() => {
+            console.log(carrossel.current?.scrollWidth, carrossel.current?.offSetWidth)
+            setWidth(carrossel.current?.scrollWidth-carrossel.current?.offSetWidth)
+        },[])
 
         return (
             <Conteudo>
-            <Carousel width={500} >
+                <Carrossel>
+                    <motion.div ref={carrossel} whileTap={{ cursor: "grabbing"}}>
+                        <Inner>
+                            <motion.div 
+                            drag="x" 
+                            dragConstraints={{right: 0, left: -width}}
+                            initial={{ x: 100}}
+                            animate={{ x: 0 }}
+                            transition={{ duration: 0.8 }} 
+                            
+                            >
+
+                                {images.map(image =>(
+                                    <Item>
+                                        <motion.div key={image}>
+                                            <img src={image} alt="Carrossel"/>
+                                        </motion.div>
+                                    </Item>
+                                ))}
+                            </motion.div>
+                            </Inner>
+                    </motion.div>
+                    
+                </Carrossel>
+            
+            </Conteudo>
+        );
+    }
+
+
+export default Slider;
+
+/*<Carousel 
+            autoPlay='true' 
+            dynamicHeight='true' 
+            infiniteLoop='true'
+            interval={4000} 
+           
+            width={500} >
                 <Slide>
                     <img src={choco2} alt="chocolate" />
                     
@@ -29,11 +79,4 @@ import trufa from '../img/trufa.png'
                     
                 </Slide>
             </Carousel>
-            </Conteudo>
-        );
-    }
-
-
-export default Slider;
-
-
+            */
