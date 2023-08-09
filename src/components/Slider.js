@@ -1,16 +1,16 @@
+import Carousel from 'react-material-ui-carousel'
 
-
-import { motion } from 'framer-motion'
-import { Conteudo, Carrossel, Inner, Item  }from '../style/styles'
+import { Conteudo, Item, Slide }from '../style/styles'
 
 
 import choco2 from '../img/choco2.png'
 import choco1 from '../img/choco1.jpg'
 import concurso from '../img/concurso.png'
 import trufa from '../img/trufa.png'
+import tema from '../img/tema.jpg'
 import { useEffect, useRef, useState } from "react";
 
-const images = [choco1,choco2,concurso,trufa]
+const images = [choco1,choco2,concurso,trufa,tema]
 
 function Slider() {
         const carrossel = useRef();
@@ -23,31 +23,22 @@ function Slider() {
 
         return (
             <Conteudo>
-                <Carrossel>
-                    <motion.div ref={carrossel} whileTap={{ cursor: "grabbing"}}>
-                        <Inner>
-                            <motion.div 
-                            drag="x" 
-                            dragConstraints={{right: 0, left: -width}}
-                            initial={{ x: 100}}
-                            animate={{ x: 0 }}
-                            transition={{ duration: 0.8 }} 
-                            
-                            >
-
-                                {images.map(image =>(
-                                    <Item>
-                                        <motion.div key={image}>
+                <Slide>
+                <Carousel
+                autoPlay='true'  
+                infiniteLoop='true'
+                interval={4000}            
+                >
+                
+                {images.map(image =>(
+                                    <Item key={image}>
+                                        <div >
                                             <img src={image} alt="Carrossel"/>
-                                        </motion.div>
+                                        </div>
                                     </Item>
                                 ))}
-                            </motion.div>
-                            </Inner>
-                    </motion.div>
-                    
-                </Carrossel>
-            
+                </Carousel>
+                </Slide>
             </Conteudo>
         );
     }
@@ -79,4 +70,29 @@ export default Slider;
                     
                 </Slide>
             </Carousel>
-            */
+
+
+
+
+            <motion.div ref={carrossel} whileTap={{ cursor: "grabbing"}}>
+                        <Inner>
+                            <motion.div 
+                            drag="x" 
+                            dragConstraints={{right: 0, left: -width}}
+                            animate={{ x: 0 }}
+                            initial={{ x: 100}}   
+                            transition={{ duration: 0.5 }} 
+                           
+                            >
+
+                                {images.map(image =>(
+                                    <Item>
+                                        <motion.div key={image}>
+                                            <img src={image} alt="Carrossel"/>
+                                        </motion.div>
+                                    </Item>
+                                ))}
+                            </motion.div>
+                            </Inner>
+                    </motion.div> */
+           

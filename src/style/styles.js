@@ -68,13 +68,11 @@ export const Icon = styled.div `
 `;
 
 export const Login = styled.div `
-   
-   
 `;
 
 export const LinkUser = styled.a `
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:#FFFF;
+    color:#000000;
     font-size:20px;
     font-weight: 400;
     text-decoration:none;
@@ -168,7 +166,7 @@ export const SubMenu = styled.ul`
     background: #FFFAFA;
     min-width: 130px;
     letter-spacing:1px;
-   
+   z-index:10;
     
    
     li{
@@ -191,38 +189,27 @@ export const SubMenu = styled.ul`
         color: #B8860B;
         width: 90px;
         height: 8px;
+        
     }
 `;
 
 
 ////CAROUSEL/////
 
-export const Carrossel = styled.div `
-    cursor: grab;
-    overflow: hidden;
-    
-   
-`;
-
-export const Inner = styled.div `
-    display:flex ;
-    
-
-   div{
-    display:flex ;
-    }
-`;
-
 export const Item = styled.div `
-    min-height:400px;
-    min-width: 600px;
-    padding: 14px;
-    
+   min-height:600px;
+    min-width: 800px;
+    padding-top: 14px;
+   
+    div{
+        
+        z-index:-1;
+    }
 
-    img {
+    img  {
         
         width: 100%;
-        height:90%;
+        height:70%;
         border-radius: 12px;
         pointer-events: none;
     }
@@ -232,14 +219,14 @@ export const Item = styled.div `
 
 export const Conteudo = styled.div `
     
-    width: 100%;
-    max-width: 900px;
+    
+    width: 99%;
     margin: 0 auto;
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-
+   
+    
 
 
     /*background-color:#F5F5F5;
@@ -253,6 +240,43 @@ export const Conteudo = styled.div `
 `;
 
 export const Slide = styled.div `
-    width: 500px;
-   height: 300px;
+    width: 80em;
+   height: 5em;
 `;
+
+////PRODUCTS/////
+
+export const ContImage = styled.div `
+width: 100%;
+height: 70vh;
+position: relative;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 800px;
+
+`;
+
+////FOOTER/////
+
+export const Foot = styled.div`
+    width: 100%;
+    height: 30vh;
+    padding-top: 20px;
+
+`;
+
+export const TextFooter = styled.div`
+    h3{
+        font-size: 30px;
+        font-weight: 100;
+        font-family: 'Dai Banna SIL', serif;
+    }
+
+`;
+
+export const SuportLink = styled.ul`
+
+`;
+

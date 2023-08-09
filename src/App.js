@@ -2,6 +2,8 @@ import { MenuSup, Link, MenuPrinc, Pesquisa, Icon, Login, Cart, LinkUser }from '
 import { Search, ShoppingCart, User } from 'react-feather';
 import NavBar from './components/NavBar'
 import Slider from './components/Slider'
+import Products from './components/Products'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -36,6 +38,8 @@ function App() {
 
       <NavBar />
       <Slider />
+      <Products />
+      <Footer />
 
     </div>
     
