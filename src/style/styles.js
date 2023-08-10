@@ -181,8 +181,6 @@ export const SubMenu = styled.ul`
         
     }
 
-    
-
     a{
         
         font-family: Arial, Helvetica, sans-serif;
@@ -197,7 +195,7 @@ export const SubMenu = styled.ul`
 ////CAROUSEL/////
 
 export const Item = styled.div `
-   min-height:600px;
+    min-height:600px;
     min-width: 800px;
     padding-top: 14px;
    
@@ -218,25 +216,11 @@ export const Item = styled.div `
 
 
 export const Conteudo = styled.div `
-    
-    
     width: 99%;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-   
-    
-
-
-    /*background-color:#F5F5F5;
-    position: absolute;
-    z-index: -1;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 99vw;*/
 `;
 
 export const Slide = styled.div `
@@ -247,9 +231,9 @@ export const Slide = styled.div `
 ////PRODUCTS/////
 
 export const ContImage = styled.div `
-width: 100%;
-height: 70vh;
-position: relative;
+    width: 100%;
+    height: 70vh;
+    position: relative;
     display: flex;
     flex-direction:row;
     justify-content: center;
@@ -262,21 +246,112 @@ position: relative;
 
 export const Foot = styled.div`
     width: 100%;
-    height: 30vh;
+    height: 44vh;
     padding-top: 20px;
+    background-color:#2E8B57;
+   
 
 `;
 
 export const TextFooter = styled.div`
-    h3{
-        font-size: 30px;
-        font-weight: 100;
-        font-family: 'Dai Banna SIL', serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#000000;
+    font-size:20px;
+    font-weight: 400;
+
+   
+    
+
+    ul :hover{
+        color: #fff;
+        background-color: red;
+    }
+`;
+
+export const SuportLink = styled(Link)`
+  display: flex;
+ 
+
+h3{
+    margin-right: 40px;
+    font-size: 30px;
+    font-weight: 300;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    color: #fff;
+    padding-left:90px;
+}
+`;
+
+export const SocialIcon = styled(Link)`
+    width: 150px;
+    display: flex;
+    justify-content: space-between   ;
+    align-items: center;
+    
+
+  img{ 
+    width: 35px;
+    
+}
+`;
+
+export const Float = styled.div`
+display: inline;
+ width: 100%;
+`;
+
+export const Text = styled.div`
+    width: 40%;
+    padding: 0 30px 0 30px;
+    font-size: 16px;
+    font-family: 'EB Garamond';
+    font-weight:100;
+    color:#FFFFF0;
+    word-spacing:2px;
+    line-height: 22px;
+    float: left;
+    display: inline;
+    text-align: justify;
+    
+`;
+
+export const Text2 = styled.div`
+    width: 50%;
+    font-size: 16px;
+    font-family: 'EB Garamond';
+    font-weight:100;
+    color:#FFFFF0;
+    word-spacing:2px;
+    line-height: 22px;
+    display: inline;
+   float: right;
+
+`;
+
+export const Info = styled.div`
+li{
+    list-style: none;
+}
+
+`;
+
+export const Info2   = styled.li`
+    list-style: none;
+    text-decoration: none;
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    word-spacing:2px;
+   
+    a{
+        padding-right: 15px;
+        color:#FFFFF0 ;
     }
 
+   
+    
 `;
-
-export const SuportLink = styled.ul`
-
-`;
-
