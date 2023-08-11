@@ -9,10 +9,11 @@ export const MenuSup = styled.div `
     margin-top: -7px;
     margin-left:-8px;
     :hover{
-        padding-bottom:14px;
+        padding-bottom:16px;
         border-bottom: 2px solid #FFD700;
         
     }
+
 `;
 
 export const Link = styled.a `
@@ -34,13 +35,25 @@ export const MenuPrinc = styled.div `
     background-repeat:no-repeat;
     background-size:cover;
     
+
+`;
+
+export const Logo = styled.div`
+    width: 346px;
+    
+    img{
+        width: 100%;
+        border-radius: 50%;
+        
+    }
+   
 `;
 
 export const Pesquisa = styled.a `
 
     display: flex;
     justify-content:center;
-    padding-left: 500px;
+    padding-left: 180px;
     padding-top:50px;
     width: 80em;
     margin-bottom: 0;
@@ -259,9 +272,6 @@ export const TextFooter = styled.div`
     font-size:20px;
     font-weight: 400;
 
-   
-    
-
     ul :hover{
         color: #fff;
         background-color: red;
@@ -270,24 +280,23 @@ export const TextFooter = styled.div`
 
 export const SuportLink = styled(Link)`
   display: flex;
- 
 
-h3{
-    margin-right: 40px;
-    font-size: 30px;
-    font-weight: 300;
-    font-style: italic;
-    font-family: 'Cormorant Garamond', serif;
-    color: #fff;
-    padding-left:90px;
-}
+`;
+
+export const LogoFooter = styled.div`
+    width: 130px ;
+    img{
+        width: 100%;
+        border-radius: 50%;
+    }
 `;
 
 export const SocialIcon = styled(Link)`
     width: 150px;
     display: flex;
-    justify-content: space-between   ;
+    justify-content: space-between;
     align-items: center;
+    padding-left: 100px;
     
 
   img{ 
@@ -330,9 +339,16 @@ export const Text2 = styled.div`
 `;
 
 export const Info = styled.div`
-li{
-    list-style: none;
-}
+
+    h4{
+        font-size: 18px;
+        padding-top: 20px;
+        color:#FFFFF0; 
+    }
+
+    li{
+        list-style: none;
+    }
 
 `;
 
@@ -351,7 +367,4 @@ export const Info2   = styled.li`
         padding-right: 15px;
         color:#FFFFF0 ;
     }
-
-   
-    
 `;
